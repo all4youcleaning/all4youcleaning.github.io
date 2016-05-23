@@ -1,0 +1,38 @@
+
+////////////////////
+//                //
+//   NAVIGATION   //
+//                //
+////////////////////
+
+nav {
+  width: 100%;
+  background: $waterblue;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding: $padding/2 0;
+  @include font-stack-subheader;
+  -webkit-transition: font 0.5s ease;
+     -moz-transition: font 0.5s ease;
+      -ms-transition: font 0.5s ease;
+       -o-transition: font 0.5s ease;
+          transition: font 0.5s ease;
+  @include breakpoint(stageSix) {
+    font-size: 14px;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover, &:focus {
+      color: white;
+      text-shadow: 0 0 5px rgba(white, 0.5);
+    }
+  }
+}

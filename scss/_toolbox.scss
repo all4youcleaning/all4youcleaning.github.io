@@ -1,0 +1,42 @@
+
+/////////////////
+//             //
+//   TOOLBOX   //
+//             //
+/////////////////
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.isHidden {
+    visibility: hidden;
+}
+
+.align-center {
+    text-align: center;
+}
+
+@mixin clear() {
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        content: "\0020";
+        clear: both;
+    }
+}
+
+@mixin textoffscreen() {
+    text-indent: -10001px;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    font-size: 0;
+    text-align: start;
+}
