@@ -6,6 +6,9 @@
 ////////////////////
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   width: 100%;
   background: $waterblue;
   color: white;
@@ -20,7 +23,7 @@ nav {
        -o-transition: font 0.5s ease;
           transition: font 0.5s ease;
   @include breakpoint(stageSix) {
-    font-size: 14px;
+    font-size: 20px;
   }
   &.sticky {
     position: fixed;
@@ -32,7 +35,6 @@ nav {
     color: white;
     &:hover, &:focus {
       color: white;
-      text-shadow: 0 0 5px rgba(white, 0.5);
     }
   }
 }

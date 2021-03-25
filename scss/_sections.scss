@@ -24,9 +24,7 @@ div.pagesize {
 
 .aboutus {
   padding: $padding;
-  position: relative;
   p, h3 {
-    padding: 0 0 0 $padding;
     @include breakpoint(stageSix) {
       padding: 0;
     }
@@ -47,7 +45,7 @@ div.pagesize {
 
 .employees {
   padding: $padding;
-  background: $lightblue url(../images/employees.png) bottom center no-repeat;
+  background-color: $lightblue;
   p {
     padding: 0 $padding 0 0;
   }
@@ -56,108 +54,49 @@ div.pagesize {
     height: auto;
     border: 5px solid white;
     box-shadow: 3px 3px 0px rgba(black, 0.25);
-  }
-  h3 {
-    background: white;
-    padding: $padding/2 $padding;
-    display: inline-block;
-    margin-bottom: 0;
-    position: relative;
-    &:after {
-      content: ' ';
-      width: 0;
-      height: 0;
-      top: 3px;
-      right: -10px;
-      position: absolute;
-      border-top: 19px solid transparent;
-      border-bottom: 19px solid transparent;
-      border-left: 19px solid white;
+
+    @include breakpoint(stageSix) {
+      display: none;
     }
   }
 }
 
 .services {
   padding: $padding;
-  h3 {
-    background: $lightblue;
-    padding: $padding/2 $padding;
-    display: inline-block;
-    margin-bottom: 0;
-    position: relative;
-    &:after {
-      content: ' ';
-      width: 0;
-      height: 0;
-      top: 3px;
-      right: -10px;
-      position: absolute;
-      border-top: 19px solid transparent;
-      border-bottom: 19px solid transparent;
-      border-left: 19px solid $lightblue;
-    }
-  }
-  .examples {
-      display: block;
-      overflow: hidden;
-      margin-bottom: 20px;
-    img {
-      width: 30%;
-      float: left;
-      border: 5px solid $lightblue;
-      box-shadow: 3px 3px 0px darken($lightblue, 10%);
+}
+
+.examples {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+  margin-left: -8px;
+  margin-right: -8px;
+  
+  > * {
+    flex: 1;
+    margin: 0 8px;
+
+    > img {
+      width: 100%;
+      border: 5px solid #d9e9f2;
+      box-shadow: 3px 3px 0px #b3d3e5;
       height: auto;
-      @include breakpoint(stageSix){
-        width: 100%;
-        margin-bottom: 20px;
-      }
-      &:first-child {
-        margin-right: 5%;
-        @include breakpoint(stageSix){
-          margin-right: 0;
-        }
-      }
-      &:nth-child(2) {
-        margin-right: 5%;
-        @include breakat("600px"){
-          display: none;
-        }
-      }
-      &:last-child {
-        @include breakpoint(stageSix){
-          margin-bottom: 0;
-        }
-      }
     }
   }
-  .examples_4up {
-      margin: -30px 0 0 -30px;
-      font-size: 0;
-      text-align: center;
-      overflow: hidden;
-      margin-bottom: 20px;
-      > * {
-          padding: 30px 0 0 30px;
-          width: 25%;
-          display: inline-block;
-          @include breakat("650px"){
-              width: 50%;
-          }
-          /* @include breakat("400px"){
-              width: 100%;
-          } */
-      }
-      img {
-          border: 5px solid $lightblue;
-          box-shadow: 3px 3px 0px darken($lightblue, 10%);
-          max-width: 100%;
-          height: auto;
-      }
+}
+
+.examples_3up {
+  @include breakpoint(stageSix) {
+    flex-direction: column;
+
+    > * {
+      margin-bottom: 10px;
+    }
   }
 }
 
 .listedservices {
-  background: #f3f3f3 url(../images/supplies.png) bottom center no-repeat;
+  background-color: #f3f3f3;
   background-size: 60%;
   padding: $padding;
   width: 100%;
@@ -169,29 +108,7 @@ div.pagesize {
 .service-list {
   float: left;
   width: 33.3%;
-  h3 {
-    font-size: 1.5em;
-    margin-top: 10px;
-    margin-bottom: 0;
-    background: $landgreen;
-    // border: 2px solid darken($landgreen, 10%);
-    display: inline-block;
-    padding: $padding/2 $padding;
-    color: white;
-    position: relative;
-    &:after {
-      content: ' ';
-      width: 0;
-      height: 0;
-      top: 50%;
-      right: -10px;
-      margin-top: -15px;
-      position: absolute;
-      border-top: 15px solid transparent;
-      border-bottom: 15px solid transparent;
-      border-left: 19px solid $landgreen;
-    }
-  }
+  
   ul {
     padding-left: 25px;
   }
@@ -225,26 +142,9 @@ div.three-column {
 }
 
 .referals {
-  background: $lightblue url(../images/referal.png) bottom center no-repeat;
+  background-color: $lightblue;
   padding: $padding;
-  h3 {
-    background: white;
-    padding: $padding/2 $padding;
-    display: inline-block;
-    margin-bottom: 0;
-    position: relative;
-    &:after {
-      content: ' ';
-      width: 0;
-      height: 0;
-      top: 3px;
-      right: -10px;
-      position: absolute;
-      border-top: 19px solid transparent;
-      border-bottom: 19px solid transparent;
-      border-left: 19px solid white;
-    }
-  }
+  
   .restrictions {
     // width: 80%;
     // margin: 0 auto;
@@ -257,24 +157,6 @@ div.three-column {
 
 .contactus {
   padding: $padding;
-  h3 {
-    background: $lightblue;
-    padding: $padding/2 $padding;
-    display: inline-block;
-    margin-bottom: 0;
-    position: relative;
-    &:after {
-      content: ' ';
-      width: 0;
-      height: 0;
-      top: 3px;
-      right: -10px;
-      position: absolute;
-      border-top: 19px solid transparent;
-      border-bottom: 19px solid transparent;
-      border-left: 19px solid $lightblue;
-    }
-  }
   table {
     margin: $padding auto 0;
     width: 80%;
@@ -308,4 +190,38 @@ div.three-column {
     text-decoration: none;
   }
 
+}
+
+.split {
+  display: flex;
+  flex-direction: row;
+  margin-left: -8px;
+  margin-right: -8px;
+
+  @include breakpoint(stageFive) {
+    display: block;
+  }
+}
+
+.split-item {
+  flex: 1;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.split-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-content: space-between;
+
+  > *:first-child {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+}
+
+.callout {
+  background-color: #f3f3f3;
+  padding: 20px;
 }
