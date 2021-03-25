@@ -192,6 +192,19 @@
 		"q": 100,
 		"rq": 75
 		},
+	"/images/employee.jpg": {
+		"ft": 16384,
+		"iS": 22904,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/employee.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
 	"/images/employees.png": {
 		"ft": 32768,
 		"iS": 15931,
@@ -370,6 +383,19 @@
 		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
+		"ou": "lpckwebp-none",
+		"q": 100,
+		"rq": 75
+		},
+	"/images/table.jpg": {
+		"ft": 16384,
+		"iS": 443644,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/table.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
 		"ou": "lpckwebp-none",
 		"q": 100,
 		"rq": 75

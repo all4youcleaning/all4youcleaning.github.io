@@ -54,6 +54,10 @@ div.pagesize {
     height: auto;
     border: 5px solid white;
     box-shadow: 3px 3px 0px rgba(black, 0.25);
+
+    @include breakpoint(stageSix) {
+      display: none;
+    }
   }
 }
 

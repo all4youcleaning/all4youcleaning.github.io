@@ -472,6 +472,11 @@ div.pagesize {
   border: 5px solid white;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
 }
+@media (max-width: 650px) {
+  .employees img {
+    display: none;
+  }
+}
 
 .services {
   padding: 20px;
@@ -654,6 +659,7 @@ header {
 }
 header h1 {
   margin: 0;
+  margin-bottom: 5px;
   -webkit-transition: font-size 0.5s ease;
   -moz-transition: font-size 0.5s ease;
   -ms-transition: font-size 0.5s ease;
@@ -667,13 +673,13 @@ header h1 {
 }
 @media (max-width: 650px) {
   header h1 {
-    font-size: 35px;
+    font-size: 42px;
   }
 }
 header h2 {
   margin: 0;
   letter-spacing: 3.1px;
-  color: rgba(255, 255, 255, 0.75);
+  color: white;
   -webkit-transition: font-size 0.5s ease;
   -moz-transition: font-size 0.5s ease;
   -ms-transition: font-size 0.5s ease;
@@ -682,19 +688,19 @@ header h2 {
 }
 @media (max-width: 750px) {
   header h2 {
-    font-size: 25px;
+    font-size: 20px;
   }
 }
 @media (max-width: 650px) {
   header h2 {
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 2.1px;
   }
 }
 
 a[href^=tel] {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.75);
+  color: white;
 }
 
 nav {
@@ -717,7 +723,7 @@ nav {
 }
 @media (max-width: 650px) {
   nav {
-    font-size: 14px;
+    font-size: 20px;
   }
 }
 nav.sticky {
@@ -731,7 +737,6 @@ nav a {
 }
 nav a:hover, nav a:focus {
   color: white;
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 footer {
